@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AgregarPublicacionActivity">
+
+    <!-- CORRECCIÓN: Se cerró la etiqueta TextView correctamente -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crea una nueva publicación"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtContenidoPublicacion"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:hint="¿Qué estás pensando?"
+        android:gravity="top"
+        android:background="@drawable/edit_text_background"
+        android:padding="12dp" />
+
+    <!-- Contenedor para la selección de imagen (ya lo tenías, sin cambios) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Botón para abrir la galería -->
+        <Button
+            android:id="@+id/btnSeleccionarImagen"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar Imagen o Música" />
+
+        <!-- Vista previa de la imagen seleccionada -->
+        <ImageView
+            android:id="@+id/imgPrevia"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0"
+            android:contentDescription="Vista previa del archivo multimedia"/>
+
+    </LinearLayout>
+
+    <!-- NUEVO: Se añade el botón "Publicar" que faltaba al final del layout -->
+    <Button
+        android:id="@+id/btnPublicar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Publicar" />
+
+</LinearLayout>

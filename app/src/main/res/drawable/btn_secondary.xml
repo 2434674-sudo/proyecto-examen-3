@@ -1,35 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Estado presionado -->
+    <!-- ESTADO PRESIONADO: Cuando el usuario está tocando el botón -->
     <item android:state_pressed="true">
         <shape android:shape="rectangle">
-            <solid android:color="#F0F0F0" />
-            <stroke android:width="2dp" android:color="#E0E0E0" />
-            <corners android:radius="14dp" />
-            <padding
-                android:left="8dp"
-                android:top="10dp"
-                android:right="8dp"
-                android:bottom="10dp" />
+            <!-- Usamos un color de fondo grisáceo semitransparente para el efecto de presión -->
+            <solid android:color="#33FFFFFF" />
+            <!-- Mantenemos el borde blanco -->
+            <stroke android:width="2dp" android:color="#FFFFFF" />
+            <!-- Mismas esquinas redondeadas -->
+            <corners android:radius="12dp" />
         </shape>
     </item>
 
-    <!-- Estado normal -->
+    <!-- ESTADO NORMAL: El aspecto por defecto del botón -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#FFFFFF" />
-            <stroke android:width="2dp" android:color="#DDDDDD" />
-            <corners android:radius="14dp" />
-            <padding
-                android:left="8dp"
-                android:top="10dp"
-                android:right="8dp"
-                android:bottom="10dp" />
-            <shadow
-                android:color="#33000000"
-                android:centerX="0.5"
-                android:centerY="0.5"
-                android:gradientRadius="150dp" />
+            <!-- Fondo transparente -->
+            <solid android:color="@android:color/transparent" />
+            <!-- Borde del botón -->
+            <stroke android:width="2dp" android:color="#FFFFFF" />
+            <!-- Esquinas redondeadas -->
+            <corners android:radius="12dp" />
         </shape>
     </item>
 

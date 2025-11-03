@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Este drawable define la apariencia de un campo de texto (EditText) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Color de fondo del EditText -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Borde del EditText -->
+    <stroke
+        android:width="1dp"
+        android:color="#CCCCCC" /> <!-- Un color gris claro para el borde -->
+
+    <!-- Esquinas redondeadas -->
+    <corners android:radius="8dp" />
+
+</shape>
+    

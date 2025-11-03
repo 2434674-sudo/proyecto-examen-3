@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".PantallaInicioActivity">
+
+    <!-- Toolbar superior (sin cambios) -->
+    <!-- Toolbar superior -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        app:title="🎵 Música"
+        app:titleTextColor="@android:color/white"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/menu_pantalla_inicio"
+        />
+
+    <!-- Scroll con publicaciones (sin cambios) -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Tarjeta de publicación -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <!-- Usuario y hora -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_person"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Corner.Full"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginStart="8dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="María José"
+                                android:textStyle="bold"
+                                android:textSize="16sp"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hace 2 horas"
+                                android:textSize="12sp"
+                                android:textColor="@color/gray"/>
+                        </LinearLayout>
+
+                        <!-- CAMBIO 1: Reemplazado ImageView por ImageButton con ID -->
+                        <ImageButton
+                            android:id="@+id/btnOpciones"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/more_dos_ic"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Opciones de la publicación"/>
+                    </LinearLayout>
+
+                    <!-- Contenido musical (sin cambios) -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/gradient_bg"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_play_circle"
+                            app:tint="@android:color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Melodía de Verano"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold"
+                            android:layout_marginTop="4dp"/>
+                    </LinearLayout>
+
+                    <!-- CAMBIO 2: Reemplazado el LinearLayout de Reacciones por uno interactivo -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="12dp">
+
+                        <!-- Botón para dar Corazón -->
+                        <ImageButton
+                            android:id="@+id/btnCorazon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_heart_outline"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Dar Me Gusta"
+                            app:tint="@color/gray" />
+
+                        <!-- Contador de Corazones -->
+                        <TextView
+                            android:id="@+id/txtContadorCorazones"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="124"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp"/>
+
+                        <!-- Botón para comentar -->
+                        <ImageButton
+                            android:id="@+id/btnComentario"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_comment"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Comentar"
+                            android:layout_marginStart="16dp"
+                            app:tint="@color/gray"/>
+
+                        <!-- Contador de comentarios (se mantiene como TextView) -->
+                        <TextView
+                            android:id="@+id/txtContadorComentarios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="28"
+                            android:textColor="@color/gray"
+                            android:layout_marginStart="4dp"/>
+
+                        <!-- Botón para compartir (opcional, como ejemplo) -->
+                        <ImageButton
+                            android:id="@+id/btnCompartir"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/ic_share"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="Compartir"
+                            app:tint="@color/gray"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Botón flotante (+) (sin cambios) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Agregar publicación"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Barra inferior (sin cambios) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

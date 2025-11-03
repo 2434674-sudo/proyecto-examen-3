@@ -2,4 +2,12 @@
 <resources>
 
     <style name="Theme.MyApplication" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="ShapeAppearanceOverlay.App.Corner.Full" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <!-- Tema específico para actividades que usan su propia Toolbar -->
+    <style name="Theme.MyApplication.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Puedes añadir más personalizaciones aquí si lo necesitas -->
+    </style>
 </resources>

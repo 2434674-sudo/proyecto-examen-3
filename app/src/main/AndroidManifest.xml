@@ -12,6 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".AgregarPublicacionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PantallaInicioActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MyApplication.NoActionBar" /> <!-- ¡LÍNEA AÑADIDA! -->
+
+        <activity
             android:name=".NotificationsActivity"
             android:exported="false" />
         <activity
