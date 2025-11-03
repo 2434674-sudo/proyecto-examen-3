@@ -1,5 +1,5 @@
 package com.example.myapplication
-
+//impotanciA NECESARIA DE LAS CUENTAS
 // NUEVO: Importaciones necesarias para manejar el resultado de otra actividad y el nuevo layout.
 import android.app.Activity
 import android.content.Intent
