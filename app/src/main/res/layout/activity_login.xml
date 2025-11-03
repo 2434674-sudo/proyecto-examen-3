@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#673AB7"
+    tools:context=".LoginActivity">
+
+    <!-- Tarjeta principal -->
+    <LinearLayout
+        android:id="@+id/cardLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="32dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp"
+        android:background="@drawable/bg_card_transparent"
+        android:elevation="10dp">
+
+        <!-- Imagen de inicio de sesión -->
+        <ImageView
+            android:id="@+id/imgLogin"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Icono de inicio de sesión"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/txtLoginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicia sesión"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"
+            android:shadowColor="#80000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="4"/>
+
+        <!-- Campo de correo -->
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:drawablePadding="12dp"
+            android:padding="14dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B3FFFFFF"
+            android:background="@drawable/bg_input"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Campo de contraseña -->
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:drawablePadding="12dp"
+            android:padding="14dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B3FFFFFF"
+            android:background="@drawable/bg_input"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botón de inicio de sesión -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar sesión"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"
+            android:background="@drawable/btn_primary"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Texto para registrarse -->
+        <TextView
+            android:id="@+id/txtGoRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿No tienes cuenta? Regístrate"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

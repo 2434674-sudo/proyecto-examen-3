@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#673AB7"
+    tools:context=".RegisterActivity">
+
+    <!-- Contenedor principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="24dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/cardRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/bg_card_transparent"
+            android:padding="28dp"
+            android:layout_margin="16dp"
+            android:elevation="10dp">
+
+            <!-- Imagen -->
+            <ImageView
+                android:id="@+id/imgRegister"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:src="@drawable/ic_profile"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="Imagen de registro" />
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/txtRegisterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear cuenta"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:shadowColor="#80000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="4"
+                android:layout_marginBottom="28dp" />
+
+            <!-- Campo de nombre -->
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre completo"
+                android:drawableStart="@drawable/ic_profile"
+                android:drawablePadding="12dp"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B3FFFFFF"
+                android:background="@drawable/bg_input"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo de correo -->
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress"
+                android:drawablePadding="12dp"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B3FFFFFF"
+                android:background="@drawable/bg_input"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo de contraseña -->
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:drawablePadding="12dp"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B3FFFFFF"
+                android:background="@drawable/bg_input"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Confirmar contraseña -->
+            <EditText
+                android:id="@+id/edtConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirmar contraseña"
+                android:inputType="textPassword"
+                android:drawablePadding="12dp"
+                android:padding="14dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B3FFFFFF"
+                android:background="@drawable/bg_input"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Botón de registro -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrarme"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:background="@drawable/btn_primary"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Enlace a iniciar sesión -->
+            <TextView
+                android:id="@+id/txtGoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Ya tienes cuenta? Inicia sesión"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

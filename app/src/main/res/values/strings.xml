@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+    <string-array name="categories">
+        <item>Selecciona una categoría</item>
+        <item>Historias</item>
+        <item>Arte</item>
+        <item>Música</item>
+    </string-array>
+</resources>

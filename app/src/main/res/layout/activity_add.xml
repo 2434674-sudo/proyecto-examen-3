@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#673AB7"
+    tools:context="com.example.myapplication.AddActivity">
+
+    <!-- Contenido con scroll -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"
+        android:fillViewport="true"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Título -->
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear publicaciones"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:shadowColor="#80000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="4"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Tarjeta Música -->
+            <LinearLayout
+                android:id="@+id/btnMusica"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/card_style_home"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:elevation="6dp"
+                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_music"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Música"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Tarjeta Arte -->
+            <LinearLayout
+                android:id="@+id/btnArte"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/card_style_home"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp"
+                android:elevation="6dp"
+                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_art"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arte"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Tarjeta Historias -->
+            <LinearLayout
+                android:id="@+id/btnHistorias"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/card_style_home"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:elevation="6dp"                android:padding="20dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_read"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Historias"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- NAV BAR -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:background="@drawable/nav_bar_background"
+        android:elevation="12dp">
+
+        <!-- HOME -->
+        <FrameLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/ic_home"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:tint="#FFFFFF"/>
+        </FrameLayout>
+
+        <!-- ADD -->
+        <FrameLayout
+            android:id="@+id/navAdd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/ic_add"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:tint="#FFFFFF"/>
+        </FrameLayout>
+
+        <!-- NOTI -->
+        <FrameLayout
+            android:id="@+id/navNoti"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/ic_notifications"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:tint="#FFFFFF"/>
+        </FrameLayout>
+
+        <!-- PERFIL -->
+        <FrameLayout
+            android:id="@+id/navPerfil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/ic_profile"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                app:tint="#FFFFFF"/>
+        </FrameLayout>
+
+    </LinearLayout>
+</RelativeLayout>
