@@ -103,7 +103,7 @@
                 android:textColorHint="#B3FFFFFF"
                 android:background="@drawable/bg_input"
                 android:layout_marginBottom="24dp" />
-
+//boton de regitro
             <!-- Botón de registro -->
             <Button
                 android:id="@+id/btnRegister"
@@ -116,7 +116,7 @@
                 android:background="@drawable/btn_primary"
                 android:textColor="#FFFFFF"
                 android:layout_marginBottom="16dp" />
-
+//enlace de inicio de secion
             <!-- Enlace a iniciar sesión -->
             <TextView
                 android:id="@+id/txtGoLogin"
