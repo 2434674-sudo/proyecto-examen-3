@@ -75,7 +75,7 @@
                 android:textColorHint="#B3FFFFFF"
                 android:background="@drawable/bg_input"
                 android:layout_marginBottom="16dp" />
-
+//CONTRASEÑA 
             <!-- Campo de contraseña -->
             <EditText
                 android:id="@+id/edtPassword"
@@ -89,7 +89,7 @@
                 android:textColorHint="#B3FFFFFF"
                 android:background="@drawable/bg_input"
                 android:layout_marginBottom="16dp" />
-
+//CONFRIMAR CONTRASEÑA
             <!-- Confirmar contraseña -->
             <EditText
                 android:id="@+id/edtConfirmPassword"
